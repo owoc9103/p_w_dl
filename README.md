@@ -1,35 +1,27 @@
 # DATA LAB · Página web (blogdown + Hugo)
 
-Sitio del **Laboratorio de Datos (DATA-LAB)** de la Pontificia Universidad Javeriana Cali, con estructura y estética alineadas al SharePoint interno `laboratorio-datos`.
+Sitio del **Laboratorio de Datos (DATA-LAB)** · Pontificia Universidad Javeriana Cali.
 
-## Navegación (como SharePoint)
+**URL pública (GitHub Pages):** https://owoc9103.github.io/p_w_dl/
 
-- **¿Quiénes somos?** → inicio (hero DATA-LAB, qué es, por qué, objetivos, comunidad)
-- **Docencia** → banda gris + cursos por área
-- **Servicios** → Consultorías / Investigación / Visualizaciones + lanzamiento
-- **Más...** → Recursos, Equipo, Proyectos, Capacitaciones, Contacto
+Repositorio: https://github.com/owoc9103/p_w_dl
 
-## Colores
+## Activar GitHub Pages (solo la primera vez)
 
-| Token | Hex |
-|-------|-----|
-| Azul institucional (nav) | `#2C5697` |
-| Azul oscuro | `#1A2744` |
-| Cyan títulos en fondos oscuros | `#7EC8E3` |
-| Amarillo institucional | `#F8CD00` |
-| Gris banda docencia | `#6B6B6B` |
+1. Entra a [Settings → Pages](https://github.com/owoc9103/p_w_dl/settings/pages)
+2. En **Build and deployment → Source** elige **GitHub Actions**
+3. Espera a que termine el workflow [Deploy Hugo site to Pages](https://github.com/owoc9103/p_w_dl/actions)
 
-## Cómo servir
+Cada `git push` a `main` vuelve a publicar el sitio automáticamente.
+
+## Desarrollo local
 
 ```r
 source("R/serve.R")
 ```
 
-## Build estático
+## Build local
 
 ```r
 source("R/build.R")
-# o: hugo --cleanDestinationDir
 ```
-
-Salida en `public/`.
