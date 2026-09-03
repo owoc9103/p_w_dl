@@ -1,0 +1,6 @@
+name = "datalab"
+license = "MIT"
+description = "Tema Hugo para el DATA LAB Javeriana Cali"
+homepage = "https://www.javerianacali.edu.co"
+tags = ["academic", "laboratory", "javeriana"]
+min_version = "0.120.0"

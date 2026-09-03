@@ -1,0 +1,14 @@
+{{ define "main" }}
+<article class="page-shell">
+  <header class="page-hero page-hero--inner">
+    <div class="container">
+      <p class="eyebrow">{{ .Params.eyebrow | default .Section }}</p>
+      <h1>{{ .Title }}</h1>
+      {{ with .Params.subtitle }}<p class="lead">{{ . }}</p>{{ end }}
+    </div>
+  </header>
+  <div class="container prose">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

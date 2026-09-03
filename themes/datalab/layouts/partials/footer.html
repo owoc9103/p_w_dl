@@ -1,0 +1,28 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <p class="footer-brand">LD · Laboratorio de Datos</p>
+      <p>{{ .Site.Params.faculty }}</p>
+      <p>{{ .Site.Params.institution }}</p>
+    </div>
+    <div>
+      <p class="footer-label">Contacto</p>
+      <p>{{ .Site.Params.contact.address }}</p>
+      <p><a href="mailto:{{ .Site.Params.contact.email }}">{{ .Site.Params.contact.email }}</a></p>
+      <p>{{ .Site.Params.contact.phone }}</p>
+    </div>
+    <div>
+      <p class="footer-label">Secciones</p>
+      <ul class="footer-links">
+        <li><a href="{{ .Site.Home.RelPermalink }}">¿Quiénes somos?</a></li>
+        <li><a href="{{ "docencia/" | relURL }}">Docencia</a></li>
+        <li><a href="{{ "servicios/" | relURL }}">Servicios</a></li>
+        <li><a href="{{ "recursos/" | relURL }}">Recursos</a></li>
+        <li><a href="{{ "contacto/" | relURL }}">Contacto</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>© {{ now.Year }} Pontificia Universidad Javeriana Cali · DATA-LAB</p>
+  </div>
+</footer>

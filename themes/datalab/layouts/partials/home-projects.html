@@ -1,0 +1,32 @@
+<section class="section">
+  <div class="container">
+    <div class="section-head section-head--row">
+      <div>
+        <p class="eyebrow">Proyectos</p>
+        <h2>Casos que convierten evidencia en acción</h2>
+      </div>
+      <a class="text-link" href="{{ "/proyectos/" | relURL }}">Ver todos</a>
+    </div>
+    <div class="project-list">
+      {{ range first 3 (where .Site.RegularPages "Section" "proyectos") }}
+      <a class="project-row" href="{{ .RelPermalink }}">
+        <div>
+          <p class="meta">{{ .Params.tag | default "Caso" }}</p>
+          <h3>{{ .Title }}</h3>
+          <p>{{ .Params.summary | default .Summary | truncate 160 }}</p>
+        </div>
+        <span class="tile-link">Abrir caso</span>
+      </a>
+      {{ else }}
+      <a class="project-row" href="{{ "/proyectos/rfm-clientes/" | relURL }}">
+        <div>
+          <p class="meta">Analítica de clientes</p>
+          <h3>Segmentación RFM</h3>
+          <p>Identificar clientes fieles, en riesgo y con potencial para focalizar decisiones comerciales.</p>
+        </div>
+        <span class="tile-link">Abrir caso</span>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</section>

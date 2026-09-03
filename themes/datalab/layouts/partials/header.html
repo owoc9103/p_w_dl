@@ -1,0 +1,33 @@
+<header class="site-header" id="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="{{ .Site.Home.RelPermalink }}">
+      <span class="brand-ld">{{ .Site.Params.brandShort | default "LD" }}</span>
+      <span class="brand-name">{{ .Site.Params.brandName | default "Laboratorio de Datos" }}</span>
+    </a>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Abrir menú" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Principal">
+      <ul>
+        {{ range .Site.Menus.main }}
+          {{ if not .HasChildren }}
+            {{ if not .Parent }}
+            <li>
+              <a href="{{ .URL | relURL }}"{{ if or ($.IsMenuCurrent "main" .) (and $.IsHome (eq .URL "/")) }} aria-current="page"{{ end }}>{{ .Name }}</a>
+            </li>
+            {{ end }}
+          {{ else }}
+            <li class="has-dropdown">
+              <a href="{{ .URL | relURL }}" class="dropdown-trigger">{{ .Name }}</a>
+              <ul class="dropdown">
+                {{ range .Children }}
+                <li><a href="{{ .URL | relURL }}">{{ .Name }}</a></li>
+                {{ end }}
+              </ul>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  </div>
+</header>

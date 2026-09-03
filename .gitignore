@@ -1,0 +1,11 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+.DS_Store
+blogdown/
+public/
+resources/
+.hugo_build.lock
+*.html
+!themes/**/*.html

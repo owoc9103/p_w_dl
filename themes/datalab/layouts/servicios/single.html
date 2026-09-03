@@ -1,0 +1,25 @@
+{{ define "main" }}
+<section class="section">
+  <div class="container">
+    <div class="service-tiles">
+      <a class="service-tile tile-consultorias" href="{{ "contacto/" | relURL }}"><span>Consultorías</span></a>
+      <a class="service-tile tile-investigacion" href="{{ "proyectos/" | relURL }}"><span>Investigación</span></a>
+      <a class="service-tile tile-visualizaciones" href="{{ "recursos/" | relURL }}"><span>Visualizaciones</span></a>
+    </div>
+
+    <div class="launch-block">
+      <p class="kicker">Lanzamiento DATA-LAB</p>
+      <h2>📊 Ayúdanos a construir el DATA-LAB que necesitas ✨</h2>
+      <p>
+        Comparte tus intereses, retos, inquietudes e ideas de proyectos para diseñar actividades
+        y experiencias que generen valor para nuestra comunidad.
+      </p>
+      <p style="margin-top:1.2rem;">
+        <a class="btn-cta" href="{{ .Site.Params.formUrl }}" target="_blank" rel="noopener noreferrer">
+          Dejar inquietudes o propuestas
+        </a>
+      </p>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,78 @@
+baseURL: "https://owoc9103.github.io/p_w_dl/"
+title: "LD Laboratorio de Datos"
+theme: "datalab"
+canonifyURLs: true
+relativeURLs: false
+pagination:
+  pagerSize: 6
+defaultContentLanguage: "es"
+languages:
+  es:
+    label: "Español"
+    weight: 1
+    locale: "es-CO"
+
+params:
+  description: "El DATA-LAB de la Pontificia Universidad Javeriana Cali es un espacio académico y tecnológico para el pensamiento analítico aplicado."
+  author: "DATA LAB · Javeriana Cali"
+  institution: "Pontificia Universidad Javeriana Cali"
+  faculty: "Facultad de Ciencias Económicas y Administrativas"
+  brandShort: "LD"
+  brandName: "Laboratorio de Datos"
+  logo: "/img/javeriana-logo-azul.svg"
+  favicon: "/img/favicon.svg"
+  contact:
+    email: "datalab@javerianacali.edu.co"
+    phone: "(+57) 602 321 8200"
+    address: "Calle 18 No. 118-250, Cali, Colombia"
+  formUrl: "https://forms.cloud.microsoft/pages/responsepage.aspx?id=RWuvFsUAo0udTIv6FuQ2AzIuIVMmSjNCu1osIqP5WINUMUNQWjdBVkQzUVc0QjU0MVRDWThSV0oxWi4u&route=shorturl"
+  colors:
+    azul: "#2C5697"
+    azulOscuro: "#1E3D6B"
+    amarillo: "#F8CD00"
+    cyan: "#7EC8E3"
+    grisBand: "#6B6B6B"
+    negro: "#131516"
+    blanco: "#FFFFFF"
+    superficie: "#F3F4F6"
+
+menu:
+  main:
+    - name: "¿Quiénes somos?"
+      url: "/"
+      weight: 1
+    - name: "Docencia"
+      url: "/docencia/"
+      weight: 2
+    - name: "Servicios"
+      url: "/servicios/"
+      weight: 3
+    - name: "Más..."
+      url: "/recursos/"
+      weight: 4
+      identifier: "mas"
+    - name: "Recursos"
+      url: "/recursos/"
+      parent: "mas"
+      weight: 1
+    - name: "Equipo"
+      url: "/equipo/"
+      parent: "mas"
+      weight: 2
+    - name: "Proyectos"
+      url: "/proyectos/"
+      parent: "mas"
+      weight: 3
+    - name: "Capacitaciones"
+      url: "/capacitaciones/"
+      parent: "mas"
+      weight: 4
+    - name: "Contacto"
+      url: "/contacto/"
+      parent: "mas"
+      weight: 5
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
