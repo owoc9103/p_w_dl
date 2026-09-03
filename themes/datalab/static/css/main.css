@@ -410,70 +410,6 @@ ul { padding-left: 1.15em; }
 .prose { padding: 2.2rem 0 3.5rem; max-width: 760px; }
 .prose h2 { color: var(--azul); }
 
-/* ---------- Contacto (foto + correo) ---------- */
-.contacto-page { background: var(--blanco); }
-
-.contacto-card {
-  position: relative;
-  min-height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.contacto-card__bg {
-  position: absolute;
-  inset: 0 0 42% 0;
-  background:
-    linear-gradient(180deg, rgba(26, 39, 68, 0.25), rgba(26, 39, 68, 0.15)),
-    url("../img/contacto-campus.jpg") center/cover no-repeat;
-}
-
-.contacto-card__band {
-  position: relative;
-  background: #0F8A96;
-  padding: 2.4rem 0 2rem;
-  min-height: 180px;
-}
-
-.contacto-card__inner {
-  display: flex;
-  align-items: flex-end;
-  gap: 1.4rem;
-  flex-wrap: wrap;
-}
-
-.contacto-card__photo {
-  width: 148px;
-  height: 148px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 4px solid #fff;
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
-  margin-top: -72px;
-  background: #fff;
-}
-
-.contacto-card__email {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.55rem;
-  color: #fff;
-  font-size: 1.05rem;
-  font-weight: 600;
-  padding-bottom: 0.35rem;
-}
-
-.contacto-card__email:hover {
-  color: #fff;
-  text-decoration: underline;
-}
-
-.contacto-card__icon {
-  font-size: 1.1rem;
-  line-height: 1;
-}
-
 /* ---------- Página Más (estilo SharePoint) ---------- */
 .mas-page { background: var(--blanco); }
 
@@ -662,8 +598,6 @@ ul { padding-left: 1.15em; }
   .mas-interest--img-bottom { grid-template-rows: auto 180px; }
   .mas-interest--img-bottom { grid-template-rows: 180px auto; }
   .mas-site-links { justify-content: flex-start; }
-  .contacto-card__inner { align-items: center; }
-  .contacto-card__photo { margin-top: -48px; }
 
   .split-2,
   .comunidad-block,

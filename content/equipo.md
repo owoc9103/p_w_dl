@@ -8,9 +8,9 @@ subtitle: "Quienes impulsan el DATA LAB desde la docencia, la investigación y e
 
 <div class="team-grid">
 <div class="person">
-<h3>Coordinación DATA LAB</h3>
-<p>Liderazgo académico y articulación con la Facultad.</p>
-<p><a href="mailto:datalab@javerianacali.edu.co">datalab@javerianacali.edu.co</a></p>
+<h3>Oscar Walduin Orozco Cerón</h3>
+<p>Líder del laboratorio</p>
+<p><a href="mailto:oscar.orozco@javerianacali.edu.co">oscar.orozco@javerianacali.edu.co</a></p>
 </div>
 <div class="person">
 <h3>Apoyo técnico</h3>

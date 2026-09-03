@@ -32,8 +32,6 @@ extraNews:
 siteLinks:
   - name: "Recursos"
     url: "/recursos/"
-  - name: "Equipo"
-    url: "/equipo/"
   - name: "Proyectos"
     url: "/proyectos/"
   - name: "Capacitaciones"

@@ -1,7 +1,10 @@
 ---
 title: "Contacto"
-layout: contacto
 eyebrow: "Contacto"
-photo: "/img/contacto-foto.jpg"
-email: "oscar.orozco@javerianacali.edu.co"
 ---
+
+## Líder del laboratorio
+
+**Oscar Walduin Orozco Cerón**
+
+[oscar.orozco@javerianacali.edu.co](mailto:oscar.orozco@javerianacali.edu.co)

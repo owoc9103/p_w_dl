@@ -50,6 +50,9 @@ menu:
     - name: "Más..."
       url: "/mas/"
       weight: 4
+    - name: "Equipo"
+      url: "/equipo/"
+      weight: 5
 
 markup:
   goldmark:
