@@ -8,14 +8,19 @@ subtitle: "Quienes impulsan el DATA LAB desde la docencia, la investigación y e
 
 <div class="team-grid">
 <div class="person">
-<h3>Oscar Walduin Orozco Cerón</h3>
-<p>Líder del laboratorio</p>
-<p><a href="mailto:oscar.orozco@javerianacali.edu.co">oscar.orozco@javerianacali.edu.co</a></p>
+<h3>Lya Paola Sierra Suárez</h3>
+<p>Directora del Departamento de Economía y Finanzas</p>
+<p><a href="mailto:lyap@javerianacali.edu.co">lyap@javerianacali.edu.co</a></p>
 </div>
 <div class="person">
-<h3>Apoyo técnico</h3>
-<p>Asesorías, talleres y acompañamiento en herramientas.</p>
-<p>Extensión FCEA · (+57) 602 321 8200</p>
+<h3>Coordinación DATA-LAB</h3>
+<p>Articulación académica y operativa del laboratorio</p>
+<p><a href="mailto:datalab@javerianacali.edu.co">datalab@javerianacali.edu.co</a></p>
+</div>
+<div class="person">
+<h3>Oscar Walduin Orozco Cerón</h3>
+<p>Líder del DATA-LAB</p>
+<p><a href="mailto:oscar.orozco@javerianacali.edu.co">oscar.orozco@javerianacali.edu.co</a></p>
 </div>
 </div>
 
