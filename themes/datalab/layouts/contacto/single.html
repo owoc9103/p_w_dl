@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="contacto-page">
+  <section class="contacto-card" aria-label="Contacto">
+    <div class="contacto-card__bg" aria-hidden="true"></div>
+    <div class="contacto-card__band">
+      <div class="container contacto-card__inner">
+        <img
+          class="contacto-card__photo"
+          src="{{ .Params.photo | relURL }}"
+          alt="Foto de contacto DATA-LAB"
+          width="160"
+          height="160"
+        >
+        <a class="contacto-card__email" href="mailto:{{ .Params.email }}">
+          <span class="contacto-card__icon" aria-hidden="true">✉</span>
+          {{ .Params.email }}
+        </a>
+      </div>
+    </div>
+  </section>
+</article>
+{{ end }}

@@ -2,7 +2,12 @@
 <article class="mas-page">
   <section class="mas-featured" aria-label="Destacados">
     {{ range .Params.featured }}
-    <a class="mas-feature mas-feature--{{ .tone }}" href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
+    <a
+      class="mas-feature"
+      href="{{ .url }}"
+      {{ if strings.HasPrefix .url "http" }}target="_blank" rel="noopener noreferrer"{{ end }}
+      style="background-image: url('{{ .image }}');"
+    >
       <span class="mas-feature__title">{{ .title }}</span>
     </a>
     {{ end }}
@@ -13,9 +18,18 @@
       <h1 class="mas-interes__heading">Te puede interesar...</h1>
       <div class="mas-interes__grid">
         {{ range .Params.interes }}
-        <a class="mas-interest mas-interest--{{ .tone }} mas-interest--img-{{ .image }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+        <a
+          class="mas-interest mas-interest--img-{{ .position }}"
+          href="{{ .url }}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <span class="mas-interest__title">{{ .title }}</span>
-          <span class="mas-interest__visual" aria-hidden="true"></span>
+          <span
+            class="mas-interest__visual"
+            style="background-image: url('{{ .image }}');"
+            aria-hidden="true"
+          ></span>
         </a>
         {{ end }}
       </div>

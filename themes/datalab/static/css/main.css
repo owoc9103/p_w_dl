@@ -410,6 +410,70 @@ ul { padding-left: 1.15em; }
 .prose { padding: 2.2rem 0 3.5rem; max-width: 760px; }
 .prose h2 { color: var(--azul); }
 
+/* ---------- Contacto (foto + correo) ---------- */
+.contacto-page { background: var(--blanco); }
+
+.contacto-card {
+  position: relative;
+  min-height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.contacto-card__bg {
+  position: absolute;
+  inset: 0 0 42% 0;
+  background:
+    linear-gradient(180deg, rgba(26, 39, 68, 0.25), rgba(26, 39, 68, 0.15)),
+    url("../img/contacto-campus.jpg") center/cover no-repeat;
+}
+
+.contacto-card__band {
+  position: relative;
+  background: #0F8A96;
+  padding: 2.4rem 0 2rem;
+  min-height: 180px;
+}
+
+.contacto-card__inner {
+  display: flex;
+  align-items: flex-end;
+  gap: 1.4rem;
+  flex-wrap: wrap;
+}
+
+.contacto-card__photo {
+  width: 148px;
+  height: 148px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+  margin-top: -72px;
+  background: #fff;
+}
+
+.contacto-card__email {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  padding-bottom: 0.35rem;
+}
+
+.contacto-card__email:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+.contacto-card__icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
 /* ---------- Página Más (estilo SharePoint) ---------- */
 .mas-page { background: var(--blanco); }
 
@@ -452,21 +516,6 @@ ul { padding-left: 1.15em; }
 .mas-feature:hover { color: var(--blanco); }
 .mas-feature:hover::before {
   background: linear-gradient(180deg, rgba(15, 28, 52, 0.25) 10%, rgba(20, 50, 100, 0.88) 100%);
-}
-
-.mas-feature--code {
-  background-image:
-    linear-gradient(135deg, rgba(28, 55, 100, 0.55), rgba(10, 18, 36, 0.35)),
-    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Crect fill='%231a2744' width='160' height='160'/%3E%3Ctext x='12' y='36' fill='%237EC8E3' font-family='monospace' font-size='11'%3Econst data%3C/text%3E%3Ctext x='12' y='56' fill='%23F8CD00' font-family='monospace' font-size='11'%3E%20%20%3D%20analyze()%3C/text%3E%3Ctext x='12' y='76' fill='%23a8d5a2' font-family='monospace' font-size='11'%3Ereturn lab%3C/text%3E%3Ctext x='12' y='96' fill='%23e8a0a0' font-family='monospace' font-size='11'%3E%7D%3C/text%3E%3C/svg%3E");
-  background-size: cover, 160px 160px;
-}
-
-.mas-feature--people {
-  background-image: linear-gradient(160deg, #2C5697 0%, #1A2744 55%, #3A6BB0 100%);
-}
-
-.mas-feature--campus {
-  background-image: linear-gradient(200deg, #1E3D6B 0%, #2C5697 40%, #0f1c34 100%);
 }
 
 .mas-interes {
@@ -526,25 +575,6 @@ ul { padding-left: 1.15em; }
 .mas-interest:hover .mas-interest__visual {
   transform: translateY(-3px);
   box-shadow: 0 14px 28px rgba(26, 39, 68, 0.18);
-}
-
-.mas-interest--lea .mas-interest__visual {
-  background-image:
-    linear-gradient(135deg, rgba(44, 86, 151, 0.25), rgba(26, 39, 68, 0.35)),
-    linear-gradient(45deg, #d9e4f2, #b8c9e0);
-}
-
-.mas-interest--finanzas .mas-interest__visual {
-  background-image:
-    linear-gradient(160deg, rgba(26, 39, 68, 0.2), rgba(44, 86, 151, 0.35)),
-    linear-gradient(120deg, #e8f0e4, #c5d8c0 40%, #2C5697 100%);
-}
-
-.mas-interest--imae .mas-interest__visual {
-  background-image:
-    linear-gradient(180deg, rgba(10, 18, 36, 0.15), rgba(10, 18, 36, 0.55)),
-    radial-gradient(circle at 30% 40%, #7EC8E3, transparent 45%),
-    linear-gradient(135deg, #1A2744, #2C5697);
 }
 
 .mas-extra {
@@ -632,6 +662,8 @@ ul { padding-left: 1.15em; }
   .mas-interest--img-bottom { grid-template-rows: auto 180px; }
   .mas-interest--img-bottom { grid-template-rows: 180px auto; }
   .mas-site-links { justify-content: flex-start; }
+  .contacto-card__inner { align-items: center; }
+  .contacto-card__photo { margin-top: -48px; }
 
   .split-2,
   .comunidad-block,
