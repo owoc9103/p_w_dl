@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="mas-page">
+  <section class="mas-featured" aria-label="Destacados">
+    {{ range .Params.featured }}
+    <a class="mas-feature mas-feature--{{ .tone }}" href="{{ .url }}"{{ if strings.HasPrefix .url "http" }} target="_blank" rel="noopener noreferrer"{{ end }}>
+      <span class="mas-feature__title">{{ .title }}</span>
+    </a>
+    {{ end }}
+  </section>
+
+  <section class="mas-interes">
+    <div class="container">
+      <h1 class="mas-interes__heading">Te puede interesar...</h1>
+      <div class="mas-interes__grid">
+        {{ range .Params.interes }}
+        <a class="mas-interest mas-interest--{{ .tone }} mas-interest--img-{{ .image }}" href="{{ .url }}" target="_blank" rel="noopener noreferrer">
+          <span class="mas-interest__title">{{ .title }}</span>
+          <span class="mas-interest__visual" aria-hidden="true"></span>
+        </a>
+        {{ end }}
+      </div>
+
+      {{ with .Params.extraNews }}
+      <div class="mas-extra">
+        <p class="mas-extra__label">También te puede interesar</p>
+        <ul>
+          {{ range . }}
+          <li>
+            <a href="{{ .url }}" target="_blank" rel="noopener noreferrer">{{ .title }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+      {{ end }}
+
+      {{ with .Params.siteLinks }}
+      <nav class="mas-site-links" aria-label="Secciones del sitio">
+        {{ range . }}
+        <a href="{{ .url | relURL }}">{{ .name }}</a>
+        {{ end }}
+      </nav>
+      {{ end }}
+    </div>
+  </section>
+</article>
+{{ end }}

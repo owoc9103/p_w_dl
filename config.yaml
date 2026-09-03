@@ -48,29 +48,8 @@ menu:
       url: "/servicios/"
       weight: 3
     - name: "Más..."
-      url: "/recursos/"
+      url: "/mas/"
       weight: 4
-      identifier: "mas"
-    - name: "Recursos"
-      url: "/recursos/"
-      parent: "mas"
-      weight: 1
-    - name: "Equipo"
-      url: "/equipo/"
-      parent: "mas"
-      weight: 2
-    - name: "Proyectos"
-      url: "/proyectos/"
-      parent: "mas"
-      weight: 3
-    - name: "Capacitaciones"
-      url: "/capacitaciones/"
-      parent: "mas"
-      weight: 4
-    - name: "Contacto"
-      url: "/contacto/"
-      parent: "mas"
-      weight: 5
 
 markup:
   goldmark:

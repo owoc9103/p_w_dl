@@ -1,0 +1,43 @@
+---
+title: "Más"
+layout: mas
+eyebrow: "Explora"
+subtitle: "Noticias, laboratorios aliados y más recursos de la comunidad DATA-LAB."
+featured:
+  - title: "Bienvenidos al DATA-LAB"
+    url: "https://javerianacaliedu.sharepoint.com/sites/laboratorio-datos/SitePages/Bienvenidos-al-Labora.aspx"
+    tone: "code"
+  - title: "Profesores del Departamento de Gestión de las Organizaciones se sumergen en la IA para la toma de decisiones"
+    url: "https://www.javerianacali.edu.co/noticias/investigadores-javerianos-se-forman-en-inteligencia-artificial"
+    tone: "people"
+  - title: "La inteligencia artificial como aliada estratégica en los negocios y la academia"
+    url: "https://www.javerianacali.edu.co/noticias/la-inteligencia-artificial-como-aliada-estrategica-en-los-negocios-y-la-academia"
+    tone: "campus"
+interes:
+  - title: "Laboratorio de Economía Aplicada - LEA"
+    url: "https://www.javerianacali.edu.co/laboratorios/laboratorio-de-economia-aplicada"
+    image: "top"
+    tone: "lea"
+  - title: "Laboratorio de Finanzas"
+    url: "https://www.javerianacali.edu.co/laboratorios/laboratorio-financiero"
+    image: "bottom"
+    tone: "finanzas"
+  - title: "Indicador Mensual de Actividad Económica, IMAE"
+    url: "https://www.javerianacali.edu.co/imae"
+    image: "top"
+    tone: "imae"
+extraNews:
+  - title: "La inteligencia artificial, una revolución que reconfigura el trabajo y las organizaciones"
+    url: "https://www.javerianacali.edu.co/noticias/la-inteligencia-artificial-una-revolucion-que-reconfigura-el-trabajo-y-las-organizaciones"
+siteLinks:
+  - name: "Recursos"
+    url: "/recursos/"
+  - name: "Equipo"
+    url: "/equipo/"
+  - name: "Proyectos"
+    url: "/proyectos/"
+  - name: "Capacitaciones"
+    url: "/capacitaciones/"
+  - name: "Contacto"
+    url: "/contacto/"
+---

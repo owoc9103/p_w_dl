@@ -86,29 +86,6 @@ ul { padding-left: 1.15em; }
   border-bottom-color: var(--blanco);
 }
 
-.has-dropdown { position: relative; }
-.dropdown {
-  display: none;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  min-width: 190px;
-  background: var(--blanco);
-  border: 1px solid var(--linea);
-  box-shadow: 0 12px 28px rgba(0,0,0,.12);
-  padding: 0.45rem 0;
-  z-index: 60;
-}
-.has-dropdown:hover .dropdown,
-.has-dropdown:focus-within .dropdown { display: block; }
-.dropdown a {
-  display: block;
-  padding: 0.55rem 1rem;
-  color: var(--texto);
-  font-size: 0.92rem;
-}
-.dropdown a:hover { background: var(--superficie); color: var(--azul); }
-
 .nav-toggle {
   display: none;
   width: 2.4rem;
@@ -433,6 +410,186 @@ ul { padding-left: 1.15em; }
 .prose { padding: 2.2rem 0 3.5rem; max-width: 760px; }
 .prose h2 { color: var(--azul); }
 
+/* ---------- Página Más (estilo SharePoint) ---------- */
+.mas-page { background: var(--blanco); }
+
+.mas-featured {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  min-height: 280px;
+}
+
+.mas-feature {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 280px;
+  padding: 1.35rem 1.25rem;
+  color: var(--blanco);
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.mas-feature::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 28, 52, 0.15) 20%, rgba(10, 18, 36, 0.82) 100%);
+  z-index: 0;
+}
+
+.mas-feature__title {
+  position: relative;
+  z-index: 1;
+  font-size: clamp(0.95rem, 1.5vw, 1.15rem);
+  font-weight: 700;
+  line-height: 1.3;
+  text-shadow: 0 1px 8px rgba(0,0,0,.35);
+}
+
+.mas-feature:hover { color: var(--blanco); }
+.mas-feature:hover::before {
+  background: linear-gradient(180deg, rgba(15, 28, 52, 0.25) 10%, rgba(20, 50, 100, 0.88) 100%);
+}
+
+.mas-feature--code {
+  background-image:
+    linear-gradient(135deg, rgba(28, 55, 100, 0.55), rgba(10, 18, 36, 0.35)),
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Crect fill='%231a2744' width='160' height='160'/%3E%3Ctext x='12' y='36' fill='%237EC8E3' font-family='monospace' font-size='11'%3Econst data%3C/text%3E%3Ctext x='12' y='56' fill='%23F8CD00' font-family='monospace' font-size='11'%3E%20%20%3D%20analyze()%3C/text%3E%3Ctext x='12' y='76' fill='%23a8d5a2' font-family='monospace' font-size='11'%3Ereturn lab%3C/text%3E%3Ctext x='12' y='96' fill='%23e8a0a0' font-family='monospace' font-size='11'%3E%7D%3C/text%3E%3C/svg%3E");
+  background-size: cover, 160px 160px;
+}
+
+.mas-feature--people {
+  background-image: linear-gradient(160deg, #2C5697 0%, #1A2744 55%, #3A6BB0 100%);
+}
+
+.mas-feature--campus {
+  background-image: linear-gradient(200deg, #1E3D6B 0%, #2C5697 40%, #0f1c34 100%);
+}
+
+.mas-interes {
+  position: relative;
+  padding: 2.6rem 0 3.2rem;
+  background:
+    radial-gradient(ellipse at 12% 20%, rgba(126, 200, 227, 0.18), transparent 42%),
+    radial-gradient(ellipse at 88% 70%, rgba(44, 86, 151, 0.1), transparent 45%),
+    linear-gradient(180deg, #F7F9FC 0%, #EEF2F7 100%);
+}
+
+.mas-interes__heading {
+  margin: 0 0 1.8rem;
+  color: var(--azul);
+  font-size: clamp(1.55rem, 2.5vw, 2rem);
+  font-weight: 800;
+}
+
+.mas-interes__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem 2rem;
+  align-items: stretch;
+}
+
+.mas-interest {
+  display: grid;
+  gap: 0.85rem;
+  color: var(--azul);
+  min-height: 320px;
+}
+
+.mas-interest:hover { color: var(--azul-oscuro); }
+.mas-interest--img-top { grid-template-rows: 1fr auto; }
+.mas-interest--img-bottom { grid-template-rows: auto 1fr; }
+.mas-interest--img-top .mas-interest__title { order: 1; }
+.mas-interest--img-top .mas-interest__visual { order: 2; }
+.mas-interest--img-bottom .mas-interest__visual { order: 1; }
+.mas-interest--img-bottom .mas-interest__title { order: 2; }
+
+.mas-interest__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.mas-interest__visual {
+  display: block;
+  min-height: 200px;
+  border-radius: 2px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 8px 24px rgba(26, 39, 68, 0.12);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mas-interest:hover .mas-interest__visual {
+  transform: translateY(-3px);
+  box-shadow: 0 14px 28px rgba(26, 39, 68, 0.18);
+}
+
+.mas-interest--lea .mas-interest__visual {
+  background-image:
+    linear-gradient(135deg, rgba(44, 86, 151, 0.25), rgba(26, 39, 68, 0.35)),
+    linear-gradient(45deg, #d9e4f2, #b8c9e0);
+}
+
+.mas-interest--finanzas .mas-interest__visual {
+  background-image:
+    linear-gradient(160deg, rgba(26, 39, 68, 0.2), rgba(44, 86, 151, 0.35)),
+    linear-gradient(120deg, #e8f0e4, #c5d8c0 40%, #2C5697 100%);
+}
+
+.mas-interest--imae .mas-interest__visual {
+  background-image:
+    linear-gradient(180deg, rgba(10, 18, 36, 0.15), rgba(10, 18, 36, 0.55)),
+    radial-gradient(circle at 30% 40%, #7EC8E3, transparent 45%),
+    linear-gradient(135deg, #1A2744, #2C5697);
+}
+
+.mas-extra {
+  margin-top: 2.4rem;
+  padding-top: 1.4rem;
+  border-top: 1px solid rgba(44, 86, 151, 0.15);
+}
+
+.mas-extra__label {
+  margin: 0 0 0.55rem;
+  color: var(--azul);
+  font-weight: 700;
+  font-size: 0.95rem;
+}
+
+.mas-extra ul {
+  margin: 0;
+  padding-left: 1.1rem;
+}
+
+.mas-extra a {
+  color: var(--texto);
+  font-size: 0.95rem;
+}
+
+.mas-extra a:hover { color: var(--azul); }
+
+.mas-site-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.1rem;
+  margin-top: 2rem;
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(44, 86, 151, 0.12);
+}
+
+.mas-site-links a {
+  color: var(--azul);
+  font-size: 0.92rem;
+  font-weight: 600;
+  border-bottom: 1px solid transparent;
+}
+
+.mas-site-links a:hover { border-bottom-color: var(--azul); }
+
 /* Footer */
 .site-footer {
   background: #111827;
@@ -467,8 +624,14 @@ ul { padding-left: 1.15em; }
   }
   .site-nav.is-open { display: block; }
   .site-nav ul { flex-direction: column; align-items: flex-start; gap: 0.55rem; }
-  .dropdown { position: static; box-shadow: none; border: 0; background: transparent; display: block; padding-left: 0.6rem; }
-  .dropdown a { color: rgba(255,255,255,0.9); }
+  .mas-featured { grid-template-columns: 1fr; }
+  .mas-feature { min-height: 220px; }
+  .mas-interes__grid { grid-template-columns: 1fr; gap: 2rem; }
+  .mas-interest { min-height: auto; }
+  .mas-interest--img-top,
+  .mas-interest--img-bottom { grid-template-rows: auto 180px; }
+  .mas-interest--img-bottom { grid-template-rows: 180px auto; }
+  .mas-site-links { justify-content: flex-start; }
 
   .split-2,
   .comunidad-block,
