@@ -4,8 +4,6 @@ eyebrow: "Personas"
 subtitle: "Quienes impulsan el DATA LAB desde la docencia, la investigación y el acompañamiento técnico."
 ---
 
-## Coordinación
-
 <div class="team-grid">
 <div class="person">
 <h3>Lya Paola Sierra Suárez</h3>
